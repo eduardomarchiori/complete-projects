@@ -1,0 +1,19 @@
+.btnPadrao{
+    font-size: 30px;
+    color: white;
+}
+
+.conta-azul-color{
+    color: white;
+    background-color: #0092CD;
+}
+
+.codenation-azul-color{
+    background-color: #E3CAFF;
+}
+
+.estilo-imagem{
+    width: 160px;
+    height: 35px;
+    margin-right: 75px;
+}

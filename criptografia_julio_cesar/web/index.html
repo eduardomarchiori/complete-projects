@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Criptografia</title>
+</head>
+<body>
+
+    <div id="app">
+        <nav class="navbar navbar-light conta-azul-color">
+            
+            <div class="d-flex flex-row">
+                <a class="navbar-brand text-white" href="https://www.codenation.dev/" target="_blank" rel="noopener">Codenation</a>
+            </div>
+            <div>            
+                <ul class="navbar-nav d-flex flex-row  ">
+                    <a href="https://contaazul.com/" target="_blank" rel="noopener">
+                        <li class="list-inline-item text-white" ><img class="estilo-imagem" src="img/conta-azul.png" alt=""></li>
+                    </a>
+                </ul>
+            </div >
+            <div class="navbar-nav d-flex flex-row">
+            <button class="btn btnPadrao" @click="meuLinkedin"><i class="fab fa-linkedin"></i></button>
+            </div>
+        </nav>
+
+        
+        <div class="container-fluid ">
+
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-12 col-lg-4 text-center">
+                    <h1 >Projeto Júlio Cesar</h1>
+                </div>
+            </div>
+    
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-10 col-lg-8">
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="col-8 col-lg-11">
+                            <div class="input-group">
+                                <input class="form-control mr-2" type="text" v-model="fraseDigitada" placeholder="Digite alguma frase..." >
+                                <button class="btn conta-azul-color" @click="obterDadosTabela" >ADICIONAR</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <table class="table table-striped mb-5 ">
+                            <thead class="thead-dark text-center">
+                                <th>Frase</th>
+                                <th>Júlio Cesar</th>
+                                <th>SHA1</th>
+                            </thead>
+                            <tbody class=" text-center">
+                                <tr v-for="objeto in listaObjetosTabela">
+                                    <td>{{objeto.julioCesar}}</td>
+                                    <td>{{objeto.frase}}</td>
+                                    <td>{{objeto.sha1}}</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr class="conta-azul-color">
+                                    <td>{{objCodenation.cifrado}}</td>
+                                    <td>{{objCodenation.decifrado}}</td>
+                                    <td>{{objCodenation.resumo_criptografico}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+<script src="js/acoes.js"></script>
+</html>
